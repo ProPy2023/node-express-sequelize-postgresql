@@ -16,6 +16,10 @@ app.use(express.json());  /* bodyParser.json() is deprecated */
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));   /* bodyParser.urlencoded() is deprecated */
 
+app.get("/createdBy",(req,res)=>{
+  res.send("Name of the Student : Patel jaykumar vijaybhai \n Enrollment No : SR22MSIT015 \n Technology : NodeJs \n Organization : Maruti Techno Lab")
+});
+
 const db = require("./app/models");
 db.sequelize.sync();
 // // drop the table if it already exists
