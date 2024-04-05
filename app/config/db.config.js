@@ -20,10 +20,7 @@ module.exports = {
   DB: "testdb_vnej",
   dialect: "postgres",
   dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false // Allow self-signed certificates
-    },
+    "ssl": true   ,
     keepAlive: true
   },
   ssl: true,
